@@ -19,3 +19,6 @@ export class ZodValidationPipe implements PipeTransform {
     return value;
   }
 }
+
+// o pipe ZodValidationPipe) recebe um esquema Zod externo através do construtor para validar os dados de entrada.
+//  Se a validação falhar, lança uma exceção BadRequestException com detalhes do erro.
