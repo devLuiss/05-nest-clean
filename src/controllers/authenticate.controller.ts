@@ -23,7 +23,7 @@ export class AuthenticateController {
   constructor(private jwt: JwtService, private prisma: PrismaService) {}
 
   @Post()
-  @UsePipes(new ZodValidationPipe(authenticateBodySchema)) // serve para validar o body da requisição com o schema que criamos
+  @UsePipes(new ZodValidationPipe(authenticateBodySchema)) // serve para validar o body da requisição com o schema que criamos do zod
   async handle(@Body() body: AuthenticateBody) {
     const { email, password } = body;
 
