@@ -48,8 +48,17 @@
 - Exemplo: `AppService` pode ser um serviço que contém lógica para buscar ou manipular dados e que é injetado em um Controller para lidar com requisições HTTP.
 - Todos os serviços precisam ser marcados com o decorator `@Injectable()` para que possam ser injetados como dependências em outras partes da aplicação.
 
+## Guards (Proteção de Rotas)
+
+- **Guards** no NestJS são usados para proteger rotas e determinar se uma requisição pode ou não ser processada com base em certas condições. Eles funcionam como "porteiros" para as rotas, decidindo se a requisição deve ou não seguir adiante.
+- Um **Guard** é basicamente uma classe que implementa a interface `CanActivate`, que tem um método `canActivate()` que retorna `true` (se a requisição pode prosseguir) ou `false` (se ela deve ser bloqueada). Esse método pode ser **assíncrono** e também pode retornar uma `Promise<boolean>`.
+
 ## Organização de Módulos:
 
 - Com o tempo, conforme a aplicação cresce, você pode querer dividir seu código em múltiplos módulos menores para **organizar melhor** e **facilitar a manutenção**.
 - O conceito de **Import e Export** no Nest permite que você organize sua aplicação modularmente, importando um módulo dentro de outro e exportando funcionalidades para que sejam reutilizadas em diferentes partes do sistema.
 - Isso é útil quando você quer dividir a lógica em diferentes módulos, como um módulo para **autenticação**, outro para **usuários**, outro para **pedidos**, etc.
+
+```
+
+```
