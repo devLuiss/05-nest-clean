@@ -7,3 +7,4 @@ export const CurrentUser = createParamDecorator(
     return request.user as UserPayload;
   }
 );
+//serve para pegar o usuario logado no sistema
